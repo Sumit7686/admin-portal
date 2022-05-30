@@ -1,0 +1,59 @@
+image: node:16.13.1
+
+include:
+  - template: Code-Quality.gitlab-ci.yml
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
+#  job code_quality runs during the test stage as part of the include Code-Quality.gitlab-ci.yml
+#  job sast runs during the test stage as part of the include Security/SAST.gitlab-ci.yml
+#  job secret key detection runs during the test stage as part of the include Secret-Detection.gitlab-ci.yml
+
+stages:
+  - test
+  - deploy-stage
+#  - production
+
+carat-eslint:
+  stage: test
+  script:
+    # install eslint
+    - yarn add eslint
+    - yarn add eslint-import-resolver-babel-module
+    - yarn add eslint-plugin-import
+    - yarn add eslint-plugin-react
+    - yarn add eslint-plugin-react-hooks
+    - yarn add eslint-plugin-react-native
+    - yarn add prettier
+    - yarn add eslint-config-prettier
+    - yarn add eslint-plugin-prettier
+    - yarn add metro-react-native-babel-preset
+    - yarn add eslint-config-airbnb
+    - yarn add eslint-config-airbnb-base
+    - yarn add eslint-plugin-jsx-a11y
+    # Run eslint
+    - node_modules/eslint/bin/eslint.js src > $CI_PROJECT_DIR/eslint.txt
+  artifacts:
+    when: always
+    expose_as: 'Carat eslint'
+    paths:
+      - eslint.txt
+  allow_failure: true
+
+deploy-stage:
+  stage: deploy-stage
+  image: ruby:latest
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=$HEROKU_APP_STAGING --api-key=$HEROKU_API_KEY
+  only:
+    - stage
+
+#production:
+#  stage: production
+#  image: ruby:latest
+#  script:
+#    - dpl --provider=heroku --app=$HEROKU_APP_PRODUCTION --api-key=$HEROKU_API_KEY
+#  only:
+#    - main

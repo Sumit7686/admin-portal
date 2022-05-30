@@ -1,0 +1,36 @@
+.directoryTitleContainer{
+    padding-bottom: 2%;
+}
+
+.directoryTitleContainer h1{
+    font-family: "Magdelin-Black";
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.directoryTitleContainer p{
+    font-family: "Magdelin-Medium";
+    font-size: 24px;
+    color: #707070;
+}
+
+.activeCell button {
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 2rem;
+    text-transform: uppercase;
+    font-family: 'Magdelin-Black';
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+  
+  .trueBtn {
+    color: #295d3d;
+    background: #e7fae3;
+  }
+  
+  .falseBtn {
+    color: #671a21;
+    background-color: #f5cfd3;
+  }

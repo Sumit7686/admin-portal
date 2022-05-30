@@ -1,0 +1,18 @@
+.main {
+  background: #f5f5f8;
+}
+.logo-img {
+  width: 50px;
+}
+.container-child {
+  text-align: center;
+}
+.error {
+  color: red;
+}
+.password {
+  padding-top: 0px;
+}
+.MuiInputBase-root input {
+  padding: 4px 10px;
+}

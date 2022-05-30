@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="79" height="30" viewBox="0 0 79 30">
+  <g id="Group_353" data-name="Group 353" transform="translate(-354 -22)">
+    <text id="Back" transform="translate(385 45)" fill="#707070" font-size="24" font-family="Magdelin-Medium, Magdelin" font-weight="500"><tspan x="0" y="0">Back</tspan></text>
+    <path id="arrow-left-solid" d="M20.005,72.589a1.4,1.4,0,0,1-1.391,1.431H4.894l4.715,4.715a1.432,1.432,0,0,1-2.027,2.023L.424,73.6a1.431,1.431,0,0,1,0-2.024l7.157-7.157a1.431,1.431,0,0,1,2.024,2.024L4.894,71.157h13.72A1.4,1.4,0,0,1,20.005,72.589Z" transform="translate(353.995 -36)" fill="#707070"/>
+  </g>
+</svg>

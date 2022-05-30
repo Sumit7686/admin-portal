@@ -1,0 +1,149 @@
+/* .dashBoardMainContainer {
+  padding: 3% 2%;
+} */
+
+.FromCaratContainer {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carat-main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+  width: 100%;
+}
+.name {
+  font-family: Magdelin-Black;
+  font-size: 32px;
+  color: #121212;
+}
+.description {
+  font-family: Magdelin-Medium;
+  font-size: 18px;
+  color: #121212;
+}
+
+.maincaraticon {
+  width: 15%;
+  text-align: center;
+  padding-top: 0.2rem;
+}
+
+.dashboardhead {
+  font-size: 48px;
+  font-family: Magdelin-Black;
+  color: #121212;
+}
+
+.dashdescription {
+  font-size: 24px;
+  font-family: Magdelin-Medium;
+  color: #707070;
+}
+
+.mdashboard {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
+  padding: 1% 1% 1% 0;
+}
+
+.maintopuser {
+  width: 45%;
+  border-radius: 10px;
+  background: white;
+  padding: 0 2% 2%;
+}
+
+.m_carat {
+  width: 55%;
+  border-radius: 10px;
+  text-align: left;
+  background: #fff;
+  padding: 1% 2% 2%;
+  margin: 0 2%;
+}
+
+.learnbtn {
+  width: 25%;
+  text-align: right;
+}
+
+.cmhead {
+  width: 60%;
+}
+
+@media only screen and (max-width: 1440px) {
+  .learnbtn button {
+    padding: 5px 22px;
+    font-size: 14px;
+  }
+  .name {
+    font-size: 26px;
+  }
+  .cmhead {
+    width: 57%;
+  }
+  .carat-main {
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mdashboard {
+    display: block;
+  }
+  .dashboardhead {
+    font-size: 42px;
+  }
+  .dashdescription {
+    font-size: 18px;
+  }
+  .maintopuser {
+    width: 100%;
+  }
+  .m_carat {
+    width: 100%;
+    margin: 30px 0;
+  }
+  .name {
+    font-size: 26px;
+  }
+  .maincaraticon {
+    width: 20%;
+  }
+  .learnbtn button {
+    padding: 5px 12px;
+    font-size: 15px;
+  }
+  .carat-main {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .dashboardhead {
+    font-size: 38px;
+  }
+  .name {
+    font-size: 24px;
+  }
+  .caraticon {
+    width: 50px;
+    height: 80px;
+  }
+  .learnbtn button {
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .dashboardhead {
+    font-size: 30px;
+  }
+  .dashdescription {
+    font-size: 15px;
+  }
+}
